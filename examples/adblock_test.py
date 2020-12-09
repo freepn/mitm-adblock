@@ -1,4 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+
 
 import adblock
 
@@ -12,7 +13,7 @@ def bench(l, desc=None):
     if not desc:
         desc = result
 
-    print "[%s] %0.5f seconds" % (desc, elapsed)
+    print("[%s] %0.5f seconds" % (desc, elapsed))
 
     return result
 
@@ -26,4 +27,4 @@ with open("urls.txt") as urls:
     for url in urls:
         url = url.strip()
         if bench(lambda: rules.should_block(url)):
-            print "Blocked:", url
+            print("Blocked: ", url)
