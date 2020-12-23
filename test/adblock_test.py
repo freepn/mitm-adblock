@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-
 import adblock
 
-def bench(l, desc=None):
+
+def bench(myl, desc=None):
     from time import time
 
-    start   = time()
-    result  = l()
+    start = time()
+    result = myl()
     elapsed = time() - start
 
     if not desc:
@@ -19,6 +19,7 @@ def bench(l, desc=None):
 
 
 rules = adblock.load_rules()
+
 
 # Types of elements that can be blocked:
 #   https://adblockplus.org/en/filter-cheatsheet#options
